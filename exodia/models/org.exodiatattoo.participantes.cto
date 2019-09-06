@@ -1,0 +1,36 @@
+namespace org.exodiatattoo.exodiatattoo
+
+participant Participante identified by participantKey {
+  o String participantKey
+  o Datos datos
+}
+
+participant Admin extends Participante {
+  o String claveAdmisnistrador
+}
+
+participant Colavorador extends Participante {
+  o String estudios
+  o String claveColaborador
+}
+
+
+participant Usiario extends Participante {
+  o String alergias
+  o String enfermedades
+  o String fechaIngreso
+  o String genero
+}
+
+
+concept Datos {
+  o String nombre
+  o String apellidos
+  o String telefono
+  o String correo
+  o String indentificacion
+  o String fechaNacimiento
+  o String contactoPersonal
+  o String eps
+  
+}
